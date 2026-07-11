@@ -1,0 +1,75 @@
+.jarList{
+    display: grid;
+    grid-template-columns: repeat(2 ,minmax(20%, 1fr));
+    grid-template-rows: repeat(2 ,minmax(20%, 1fr));
+    gap: 20px;
+    height: calc(100vh - 300px);
+    margin: 0 auto;
+}
+
+.jarItem{
+    width: 100%;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+}
+.jarItem:hover .jarItem_out, .jarItem.active .jarItem_out{
+    transform: translateY(-70%);
+
+}
+.jarList:has(.jarItem:hover) .jarItem:not(:hover),
+.jarList:has(.jarItem.active) .jarItem:not(.active){
+    transform: scale(0.9);
+    opacity: 0.3;
+}
+.jarItem .jarItem_out{
+    position:absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 10;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.jarItem .jarItem_in{
+    position:absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.jarItem:nth-child(-n+2) .jarItem_out,.jarItem:nth-child(-n+2) .jarItem_in{
+    top: 55%;
+}
+
+.opening_modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+}
+
+.opening_modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(60, 42, 33, 0.55);
+    backdrop-filter: blur(3px);
+}
+
+.opening_modal__content {
+    position: relative;
+    text-align: center;
+}
+
+.opening_modal__badge {
+    width: 180px;
+    height: auto;
+    will-change: transform;
+}
+
+.opening_modal__text {
+    margin-top: 24px;
+    font-family: "Dancing Script", cursive; /* 손글씨체 톤에 맞춰 */
+    font-size: 20px;
+    color: #3c2a21;
+}

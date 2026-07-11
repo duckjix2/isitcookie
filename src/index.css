@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'MapoGeumbitnaru';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoGoldenPierA.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'OngleipParkDahyeon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+:root {
+  --text: #673C33;
+  --bg: #F7F1E5;
+  --accent: #CF541B;
+  --white: #FFF;
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --serif: "MapoGeumbitnaru", serif;
+  --heading: "OngleipParkDahyeon",system-ui, 'Segoe UI', Roboto, sans-serif;
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  /* color-scheme: light dark; */
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+#root{
+    position: relative;
+    margin: 0 auto;
+    max-width: 640px;
+    height: 100vh;
+}
+
+
+button{
+    height: 48px;
+    background-color: var(--bg);
+    border: 0;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+button.primary{
+    background-color: var(--accent);
+    color: var(--bg);
+    font-family: var(--heading);
+    font-size: 24px;
+}
+
+button:disabled{
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+.bottom_fix{
+    position: absolute;
+    left:0;bottom: 0;
+    width: 100%;
+    padding: 24px 16px;
+
+    z-index: 1000;
+}
+
+.bottom_fix button.primary{
+    width: 100%;
+}
