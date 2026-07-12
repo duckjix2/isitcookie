@@ -16,7 +16,7 @@ const Home = () => {
     };
 
     const handleOpeningDone = () => {
-        navigate(`/result/${pendingResult.id}`, { state: pendingResult });
+        navigate(`/result/${pendingResult.id}`, { state: { ...pendingResult, tinId: selected } });
     };
 
     return (

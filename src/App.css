@@ -5,7 +5,7 @@
 
 .header .logo img{
     margin-top: 40px;
-    height: 109px;
+    height: 60px;
 }
 
 .title{
@@ -13,4 +13,28 @@
     font-family: var(--heading);
     font-size: 32px;
 }
-
+.result{
+    background-color: var(--bg);
+    padding-bottom: 20px;
+}
+.resultHeader{
+    position: relative;
+    background-color: var(--bg);
+}
+.resultHeader .resultHeader__img{
+    position: relative;
+    max-width: 170px;
+    margin:0 auto 50px;
+    aspect-ratio: 1 / 1;
+}
+.resultHeader .resultHeader__img .resultHeader__img--out{
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+}
+.resultHeader .resultHeader__img .resultHeader__img--in{
+    position: absolute;
+    top: 40px; left: 50%;
+    transform: translate(-50%);
+}

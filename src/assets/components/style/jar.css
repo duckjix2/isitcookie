@@ -4,7 +4,7 @@
     grid-template-rows: repeat(2 ,minmax(20%, 1fr));
     gap: 20px;
     height: calc(100vh - 300px);
-    margin: 0 auto;
+    margin: 0 auto 0 10px;
 }
 
 .jarItem{
@@ -41,35 +41,3 @@
     top: 55%;
 }
 
-.opening_modal {
-    position: fixed;
-    inset: 0;
-    z-index: 100;
-    display: grid;
-    place-items: center;
-}
-
-.opening_modal__backdrop {
-    position: absolute;
-    inset: 0;
-    background: rgba(60, 42, 33, 0.55);
-    backdrop-filter: blur(3px);
-}
-
-.opening_modal__content {
-    position: relative;
-    text-align: center;
-}
-
-.opening_modal__badge {
-    width: 180px;
-    height: auto;
-    will-change: transform;
-}
-
-.opening_modal__text {
-    margin-top: 24px;
-    font-family: "Dancing Script", cursive; /* 손글씨체 톤에 맞춰 */
-    font-size: 20px;
-    color: #3c2a21;
-}

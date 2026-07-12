@@ -1,9 +1,11 @@
 import { useEffect, useRef } from "react";
+import jar from "../data/jar.json"
 import gsap from "gsap";
-
+import "./style/openingModal.css"
 const OpeningModal = ({ tinId, onDone }) => {
     const modalRef = useRef(null);
     const badgeRef = useRef(null);
+    const selectJar = jar.jar[tinId].out
 
     useEffect(() => {
         const tl = gsap.timeline({ onComplete: onDone });
@@ -45,7 +47,7 @@ const OpeningModal = ({ tinId, onDone }) => {
                 <img
                     ref={badgeRef}
                     className="opening_modal__badge"
-                    src={`/tins/${tinId}.png`}
+                    src={selectJar}
                     alt=""
                 />
                 <p className="opening_modal__text">쿠키통 여는 중...</p>

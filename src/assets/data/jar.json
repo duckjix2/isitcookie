@@ -1,8 +1,8 @@
 {
     "jar": [
-        {"out":"src/assets/image/jar/box1.png","in":"src/assets/image/jar/box1_in.png"},
-        {"out":"src/assets/image/jar/box2.png","in":"src/assets/image/jar/box2_in.png"},
-        {"out":"src/assets/image/jar/box3.png","in":"src/assets/image/jar/box3_in.png"},
-        {"out":"src/assets/image/jar/box4.png","in":"src/assets/image/jar/box4_in.png"}
+        {"out":"/images/jar/box1.png","in":"/images/jar/box1_in.png"},
+        {"out":"/images/jar/box2.png","in":"/images/jar/box2_in.png"},
+        {"out":"/images/jar/box3.png","in":"/images/jar/box3_in.png"},
+        {"out":"/images/jar/box4.png","in":"/images/jar/box4_in.png"}
     ]
 }
