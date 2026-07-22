@@ -80,7 +80,7 @@ button:disabled{
     display: flex;
     left:0;bottom: 0;
     width: calc(100% - 32px);
-    padding: 24px 16px;
+    padding: 24px 16px 36px;
 
     z-index: 1000;
 }
